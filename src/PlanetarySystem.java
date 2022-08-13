@@ -48,8 +48,9 @@ public class PlanetarySystem extends JFrame implements GlobalConstants{
         setA();
         setVelocities();
         outer.updatePosition();
-        try{Thread.sleep(2);}
+        try{Thread.sleep(3);}
         catch(InterruptedException ex){Thread.currentThread().interrupt();}
+        this.repaint();
         update();
     }
 
@@ -75,7 +76,7 @@ public class PlanetarySystem extends JFrame implements GlobalConstants{
         double v = distance/((double)calculateT());
         System.out.println("T: " + calculateT());
         System.out.println("v2: " + v);
-        outer.setVelocity(v*100);
+        outer.setVelocity(v*5000);
     }
 
     public void setVelocities(){
